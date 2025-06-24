@@ -9,7 +9,7 @@ const taskRoutes = require("./routes/taskRoute");
 
 const app = express();
 app.use(cors({
-    origin: '*',
+    origin: 'https://taskflow-04k6.onrender.com',
     credentials: true
   }));
 app.use(express.json());
