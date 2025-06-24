@@ -36,7 +36,7 @@ const initialState: TaskState = {
 // Thunks
 export const fetchTasks = createAsyncThunk('tasks/fetch', async () => {
   const token = localStorage.getItem('token');
-  const res = await axios.get('http://localhost:3000/api/tasks', {
+  const res = await axios.get('https://taskflow-04k6.onrender.com/api/tasks', {
     headers: { Authorization: `Bearer ${token}` },
   });
   return res.data as Task[];
@@ -49,7 +49,7 @@ export const addTask = createAsyncThunk(
   'tasks/add',
   async (taskData: Omit<Task, 'id' | 'createdAt' | 'updatedAt'>) => {
     const token = localStorage.getItem('token');
-    const res = await axios.post('http://localhost:3000/api/tasks', {
+    const res = await axios.post('https://taskflow-04k6.onrender.com/api/tasks', {
       ...taskData,
       status: normalizeStatus(taskData.status),
     }, {
@@ -64,7 +64,7 @@ export const addTask = createAsyncThunk(
 
 export const deleteTask = createAsyncThunk('tasks/delete', async (id: string) => {
   const token = localStorage.getItem('token');
-  await axios.delete(`http://localhost:3000/api/tasks/${id}`, {
+  await axios.delete(`https://taskflow-04k6.onrender.com/api/tasks/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
   return id;
@@ -74,7 +74,7 @@ export const updateTask = createAsyncThunk(
   'tasks/update',
   async ({ id, updates }: { id: string; updates: Partial<Omit<Task, 'id' | 'createdAt' | 'updatedAt'>> }) => {
     const token = localStorage.getItem('token');
-    const res = await axios.put(`http://localhost:3000/api/tasks/${id}`, {
+    const res = await axios.put(`https://taskflow-04k6.onrender.com/api/tasks/${id}`, {
       ...updates,
       status: updates.status ? normalizeStatus(updates.status) : undefined,
     }, {
