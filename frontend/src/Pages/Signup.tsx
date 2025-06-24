@@ -30,8 +30,6 @@ const Signup = () => {
 
     setIsLoading(true);
     
-    // TODO: Implement JWT authentication via Supabase
-    // console.log(process.env.BACKEND_URL)
     try {
       
       await axios.post(`https://taskflow-04k6.onrender.com/api/auth/signup`,{email,password})

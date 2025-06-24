@@ -18,7 +18,6 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
     
-    // TODO: Implement JWT authentication via Supabase
     try {
       const res=await axios.post(`https://taskflow-04k6.onrender.com/api/auth/login`,{email,password})
       const token = res.data.token;

@@ -5,8 +5,7 @@ import Dashboard from './Dashboard';
 const Index = () => {
   const navigate = useNavigate();
 
-  // TODO: Check authentication status
-  const isAuthenticated = false; // This should come from your auth context/store
+  const isAuthenticated = false;
 
   useEffect(() => {
     if (!isAuthenticated) {
