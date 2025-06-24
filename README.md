@@ -145,4 +145,4 @@ npm run dev
 ![MobileSignup](./screenshots/mobile-signup.png)
 
 ### 📋 Dashboard Page
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./screenshots/AfterFlash.png)
