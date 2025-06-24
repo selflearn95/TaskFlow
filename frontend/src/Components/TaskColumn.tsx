@@ -1,8 +1,11 @@
 
-import React from 'react';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/Components/ui/card';
 import TaskCard from './TaskCard';
-import type { Task, TaskStatus } from './TaskBoard';
+import type { Task } from './TaskBoard';
+
+type TaskStatus = 'todo' | 'in-progress' | 'done';
+
 
 interface TaskColumnProps {
   title: string;
@@ -11,7 +14,7 @@ interface TaskColumnProps {
   className?: string;
 }
 
-const TaskColumn = ({ title, status, tasks, className = '' }: TaskColumnProps) => {
+const TaskColumn = ({ title, tasks, className = '' }: TaskColumnProps) => {
   return (
     <Card className={`${className} border-2`}>
       <CardHeader className="pb-3">

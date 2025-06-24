@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 import { Card, CardContent } from '@/Components/ui/card';
 import { Button } from '@/Components/ui/button';
 import { Badge } from '@/Components/ui/badge';
 import { Pen, Trash2 } from 'lucide-react';
 import type { Task } from './TaskBoard';
+import { useState } from 'react';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { deleteTask, updateTask } from '@/redux/Task/taskSlice';
 import EditTaskDialog from './EditTaskDialog';

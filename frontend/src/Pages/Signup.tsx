@@ -34,7 +34,7 @@ const Signup = () => {
     // console.log(process.env.BACKEND_URL)
     try {
       
-      const res=await axios.post(`http://localhost:3000/api/auth/signup`,{email,password})
+      await axios.post(`http://localhost:3000/api/auth/signup`,{email,password})
       toast({
         title: "Signup successful",
         description: "You can now log in.",

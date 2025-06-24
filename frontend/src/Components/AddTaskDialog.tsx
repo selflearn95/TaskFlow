@@ -5,11 +5,11 @@ import { Input } from '@/Components/ui/input';
 import { Label } from '@/Components/ui/label';
 import { Textarea } from '@/Components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/Components/ui/select';
-import type { TaskStatus } from './TaskBoard';
+
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { addTask } from '@/redux/Task/taskSlice';
 
-import axios from 'axios';
+type TaskStatus = 'todo' | 'in-progress' | 'done';
 
 interface AddTaskDialogProps {
   open: boolean;

@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
 import TaskColumn from "./TaskColumn";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
+import { useEffect } from "react";
 import { fetchTasks } from "@/redux/Task/taskSlice";
-import type { TaskStatus } from "@/redux/Task/taskSlice";
+
+type TaskStatus = 'todo' | 'in-progress' | 'done';
 
 export interface Task {
   id: string;
